@@ -9,7 +9,7 @@ function App() {
   }
 
   return (
-    <div style={{ marginTop: "5rem" }}>
+    <div style={{ margin: "5rem" }}>
       <RadioButton onChange={handleChange} />
     </div>
   );

@@ -17,8 +17,8 @@ const RadioButton: any = styled.button`
   font: 400 0.875rem "Inter", sans-serif;
   border: none;
   border-radius: 0.3125rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5625rem;
+  padding-bottom: 0.5625rem;
   background-color: ${(props: any) =>
     props.isChecked ? "#7758C7" : "#FFFFFF"};
   color: ${(props: any) => (props.isChecked ? "#FFFFFF" : "#3F3F46")};

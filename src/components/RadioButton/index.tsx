@@ -23,12 +23,10 @@ export function RadioButton({
   }
 
   return (
-    <div>
       <RadioButtonView
         choices={choices}
         handleClick={handleClick}
         checked={checked}
       />
-    </div>
   );
 }
