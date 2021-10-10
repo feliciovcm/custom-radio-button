@@ -22,7 +22,7 @@ const RadioButton: any = styled.button`
   background-color: ${(props: any) =>
     props.isChecked ? "#7758C7" : "#FFFFFF"};
   color: ${(props: any) => (props.isChecked ? "#FFFFFF" : "#3F3F46")};
-
+  text-align: center !important;
   transition: 0.2s ease;
   &:hover {
     cursor: pointer;
