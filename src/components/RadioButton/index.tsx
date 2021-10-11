@@ -12,6 +12,9 @@ interface RadioButtonProps {
   color?: string;
   minWidth?: string | number;
   maxWidth?: string | number;
+  containerPadding?: string | number;
+  buttonPadding?: string | number;
+  gridGap?: string | number;
 }
 
 export function RadioButton({
@@ -20,6 +23,9 @@ export function RadioButton({
   color,
   minWidth,
   maxWidth,
+  containerPadding,
+  buttonPadding,
+  gridGap,
 }: RadioButtonProps) {
   const [checked, setChecked] = useState(0);
 
@@ -36,6 +42,9 @@ export function RadioButton({
       color={color}
       minWidth={minWidth}
       maxWidth={maxWidth}
+      containerPadding={containerPadding}
+      buttonPadding={buttonPadding}
+      gridGap={gridGap}
     />
   );
 }

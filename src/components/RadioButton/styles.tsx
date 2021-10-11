@@ -6,6 +6,9 @@ interface StylingProps {
   isChecked?: boolean;
   minWidth?: string | number;
   maxWidth?: string | number;
+  containerPadding?: string | number;
+  buttonPadding?: string | number;
+  gridGap?: string | number;
 }
 
 const RadioContainer = styled.div`
@@ -14,13 +17,13 @@ const RadioContainer = styled.div`
   width: 100%;
   max-width: ${({ maxWidth }) => maxWidth};
   min-width: ${({ minWidth }) => minWidth};
-  padding: 0.25rem;
+  padding: ${({ containerPadding }) => containerPadding};
   display: grid;
   grid-template-columns: repeat(
     ${({ choicesAmount }: StylingProps) => choicesAmount},
     1fr
   );
-  grid-gap: 0.375rem;
+  grid-gap: ${({ gridGap }) => gridGap};
   background-color: #ffffff;
 `;
 
@@ -28,8 +31,8 @@ const RadioButton = styled.button`
   font: 400 0.875rem "Inter", sans-serif;
   border: none;
   border-radius: 0.3125rem;
-  padding-top: 0.5625rem;
-  padding-bottom: 0.5625rem;
+  padding-top: ${({ buttonPadding }) => buttonPadding};
+  padding-bottom: ${({ buttonPadding }) => buttonPadding};
   background-color: ${({ color, isChecked }: StylingProps) =>
     isChecked ? color : "#FFFFFF"};
   color: ${({ isChecked }: StylingProps) =>
