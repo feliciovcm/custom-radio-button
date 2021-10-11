@@ -8,7 +8,7 @@ type onChangeEventData = {
 
 interface RadioButtonProps {
   choices?: string[];
-  onChange: (event: onChangeEventData) => void;
+  onChange?: (event: onChangeEventData) => void;
 }
 
 export function RadioButton({
@@ -19,14 +19,14 @@ export function RadioButton({
 
   function handleClick(choice: string, index: number) {
     setChecked(index);
-    onChange({ checked: choice, index });
+    if (onChange) onChange({ checked: choice, index });
   }
 
   return (
-      <RadioButtonView
-        choices={choices}
-        handleClick={handleClick}
-        checked={checked}
-      />
+    <RadioButtonView
+      choices={choices}
+      handleClick={handleClick}
+      checked={checked}
+    />
   );
 }
