@@ -1,21 +1,28 @@
 import { RadioContainer, RadioButton } from "./styles";
 
 interface RadioButtonViewProps {
-  choices: string[];
+  choices?: string[];
   handleClick: (choice: string, idx: number) => void;
   checked: number | boolean;
-  color?: string; 
+  color?: string;
+  minWidth?: string | number;
+  maxWidth?: string | number;
 }
 
 export function RadioButtonView({
-  choices = [],
+  choices = ["Corretivo", "Preventivo"],
   handleClick,
   checked,
   color = "#7758C7",
-  ...rest
+  minWidth = "22.1875rem",
+  maxWidth = "33.875rem",
 }: RadioButtonViewProps) {
   return (
-    <RadioContainer choicesAmount={choices.length} {...rest}>
+    <RadioContainer
+      choicesAmount={choices.length}
+      minWidth={typeof minWidth === "number" ? `${minWidth}px` : minWidth}
+      maxWidth={typeof maxWidth === "number" ? `${maxWidth}px` : maxWidth}
+    >
       {choices.map((choice, index) => {
         return (
           <RadioButton

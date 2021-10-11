@@ -1,4 +1,4 @@
-import { useState, HTMLProps } from "react";
+import { useState } from "react";
 import { RadioButtonView } from "./indexView";
 
 type onChangeEventData = {
@@ -6,17 +6,20 @@ type onChangeEventData = {
   index: number;
 };
 
-interface RadioButtonProps extends HTMLProps<HTMLDivElement> {
+interface RadioButtonProps {
   choices?: string[];
   onChoiceChange?: (event: onChangeEventData) => void;
   color?: string;
+  minWidth?: string | number;
+  maxWidth?: string | number;
 }
 
 export function RadioButton({
-  choices = ["Corretivo", "Preventivo"],
+  choices,
   onChoiceChange,
   color,
-  ...rest
+  minWidth,
+  maxWidth,
 }: RadioButtonProps) {
   const [checked, setChecked] = useState(0);
 
@@ -31,7 +34,8 @@ export function RadioButton({
       handleClick={handleClick}
       checked={checked}
       color={color}
-      {...rest}
+      minWidth={minWidth}
+      maxWidth={maxWidth}
     />
   );
 }

@@ -4,14 +4,16 @@ interface StylingProps {
   choicesAmount?: number;
   color?: string;
   isChecked?: boolean;
+  minWidth?: string | number;
+  maxWidth?: string | number;
 }
 
 const RadioContainer = styled.div`
   border: 1px solid #d9d9d9;
   border-radius: 0.3125rem;
   width: 100%;
-  max-width: 33.875rem;
-  min-width: 22.1875rem;
+  max-width: ${({ maxWidth }) => maxWidth};
+  min-width: ${({ minWidth }) => minWidth};
   padding: 0.25rem;
   display: grid;
   grid-template-columns: repeat(
