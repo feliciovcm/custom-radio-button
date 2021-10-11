@@ -50,7 +50,7 @@ yarn start
 
 This project is a front-end only application, that runs on port 3000.
 
-## 📫 Contribuindo para <Custom-radio-button>
+## 📫 Contributing for <Custom-radio-button>
 
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 
