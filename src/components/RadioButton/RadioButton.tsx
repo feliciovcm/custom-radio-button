@@ -12,14 +12,14 @@ export type ChoicesData = {
 }
 
 interface RadioButtonProps {
-  choices?: ChoicesData[];
-  onChange?: (event: onChangeEventData) => void;
-  color?: string;
-  minWidth?: string | number;
-  maxWidth?: string | number;
-  containerPadding?: string | number;
   buttonPadding?: string | number;
+  choices?: ChoicesData[];
+  color?: string;
+  containerPadding?: string | number;
   gridGap?: string | number;
+  maxWidth?: string | number;
+  minWidth?: string | number;
+  onChange?: (event: onChangeEventData) => void;
 }
 
 export function RadioButton(props: RadioButtonProps) {

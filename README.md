@@ -50,6 +50,35 @@ yarn start
 
 This project is a front-end only application, that runs on port 3000.
 
+
+## API
+
+### Select props
+
+| name | description | type | default |
+| --- | --- | --- | --- |
+| buttonPadding | vertical padding applied to the button component | String or Number | '' |
+| choices | array of choices to be listed | Array<{id: String or Number, name: String}> | [{ id: 1, name: "Corretivo" },{ id: 2, name: "Preventivo" }] |
+| color | color attribute applied to the colored button | String | "#7758C7" |
+| containerPadding | padding applied to the component wrapper | String or Number | "0.25rem" |
+| gridGap | grid-gap attribute applied to the component wrapper | String or Number | "0.375rem" |
+| maxWidth | max-width attribute applied to the component wrapper | String or Number | "33.875rem" |
+| minWidth | min-width attribute applied to the component wrapper | String or Number | "22.1875rem" |
+| onChange | called when select an option or input value change(combobox) | function(value, option:Option/Array<Option>) | - |
+
+
+| nome | descrição | tipo | padrão |
+| --- | --- | --- | --- |
+| buttonPadding | atributo padding vertical aplicado ao componente do botão | String ou Number | '' |
+| choices | conjunto de opções a serem listadas | Array <{id: String ou Number, nome: String}> | [{id: 1, name: "Corretivo"}, {id: 2, name: "Preventivo"}] |
+| color | atributo de cor aplicado ao botão colorido | String | "# 7758C7" |
+| containerPadding | atributo padding aplicado ao container do componente | String ou Number | "0.25rem" |
+| gridGap | atributo grid-gap aplicado ao container do componente | String ou Number | "0.375rem" |
+| maxWidth | atributo max-width aplicado ao container do componente | String ou Number | "33.875rem" |
+| minWidth | atributo min-width aplicado ao container do componente | String ou Number | "22.1875rem" |
+| onChange | chamado ao selecionar uma opção ou alteração do valor de entrada (combobox) | function(value, option: Option / Array <Option>) | - |
+
+
 ## 📫 Contributing for <Custom-radio-button>
 
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
