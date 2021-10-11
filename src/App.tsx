@@ -1,6 +1,6 @@
-import { RadioButton } from "./components/RadioButton";
+import { RadioButton, ChoicesData } from "./components/RadioButton/RadioButton";
 type onChangeEventData = {
-  checked: string;
+  checked: ChoicesData;
   index: number;
 };
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div style={{ margin: "5rem" }}>
-      <RadioButton onChoiceChange={handleChange} />
+      <RadioButton onChange={handleChange} />
     </div>
   );
 }

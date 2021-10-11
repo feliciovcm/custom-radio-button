@@ -1,14 +1,19 @@
 import { useState } from "react";
-import { RadioButtonView } from "./indexView";
+import { RadioButtonView } from "./RadioButtonView";
 
 type onChangeEventData = {
-  checked: string;
+  checked: ChoicesData;
   index: number;
 };
 
+export type ChoicesData = {
+  name: string;
+  id: string | number;
+}
+
 interface RadioButtonProps {
-  choices?: string[];
-  onChoiceChange?: (event: onChangeEventData) => void;
+  choices?: ChoicesData[];
+  onChange?: (event: onChangeEventData) => void;
   color?: string;
   minWidth?: string | number;
   maxWidth?: string | number;
@@ -17,21 +22,23 @@ interface RadioButtonProps {
   gridGap?: string | number;
 }
 
-export function RadioButton({
-  choices,
-  onChoiceChange,
-  color,
-  minWidth,
-  maxWidth,
-  containerPadding,
-  buttonPadding,
-  gridGap,
-}: RadioButtonProps) {
+export function RadioButton(props: RadioButtonProps) {
+  const {
+    choices,
+    onChange,
+    color,
+    minWidth,
+    maxWidth,
+    containerPadding,
+    buttonPadding,
+    gridGap,
+  } = props;
+
   const [checked, setChecked] = useState(0);
 
-  function handleClick(choice: string, index: number) {
+  function handleClick(choice: ChoicesData, index: number) {
     setChecked(index);
-    if (onChoiceChange) onChoiceChange({ checked: choice, index });
+    if (onChange) onChange({ checked: choice, index });
   }
 
   return (
